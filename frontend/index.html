@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <header>
+        <h1>Stock Market Dashboard 📈</h1>
+      <a href="https://finance.yahoo.com/lookup/">Find Stocks on Yahoo!</a>
+    </header>
+
+    <div class="container">
+        
+        <div class="search-bar">
+            <input type="text" id="ticker-input" placeholder="Enter Stock Ticker (e.g., AAPL)">
+            <button id="predict-btn">Analyze</button>
+        </div>
+        
+        <div id="loading-spinner" class="spinner" style="display: none;"></div>
+
+        <div id="results-grid" class="results-grid" style="display: none;">
+            
+            <div class="grid-card" id="prediction-card">
+                <h2 id="result-ticker"></h2>
+                <p class="price-label">Predicted Next Close:</p>
+                <p id="result-price" class="price"></p>
+                <p class="sentiment-label">Overall News Sentiment:</p>
+                <p id="result-sentiment" class="sentiment"></p>
+            </div>
+
+            <div class="grid-card" id="info-card">
+                <h2>Company Info</h2>
+                <ul id="company-info-list">
+                    </ul>
+                <p id="company-summary"></p>
+            </div>
+
+            <div class="grid-card" id="chart-card">
+                <h2>Historical Price</h2>
+                <div class="chart-controls">
+                    <input type="radio" id="hist-1m" name="hist-period" value="1mo" checked>
+                    <label for="hist-1m">1M</label>
+                    <input type="radio" id="hist-6m" name="hist-period" value="6mo">
+                    <label for="hist-6m">6M</label>
+                    <input type="radio" id="hist-1y" name="hist-period" value="1y">
+                    <label for="hist-1y">1Y</label>
+                </div>
+                <div class="chart-container">
+                    <canvas id="stock-chart"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="news-container" class="grid-card" style="display: none;">
+            <h2>Recent News</h2>
+            <div id="news-list">
+                </div>
+        </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
