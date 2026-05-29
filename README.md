@@ -11,10 +11,6 @@ The AI-Powered Stock Market Prediction System is an advanced Artificial Intellig
 
 The main purpose of this project is to help users, investors, and financial analysts make better investment decisions by using AI-driven predictions and market sentiment analysis. Traditional stock analysis methods require large amounts of manual effort and market expertise, whereas this system automates the analysis process using Machine Learning algorithms.
 
-This project uses an LSTM (Long Short-Term Memory) neural network, which is a powerful Deep Learning model specially designed for time-series forecasting and sequential data analysis. The LSTM model learns patterns, trends, and fluctuations from historical stock price data to predict future stock prices with improved accuracy.
-
-In addition to price prediction, the system also performs NLP-based sentiment analysis on financial news articles and market headlines. By analyzing positive, negative, and neutral sentiments from financial news, the system understands market emotions and investor behavior, which significantly impacts stock market trends.
-
 The project architecture consists of three major modules:
 
 - Frontend module for displaying graphs, predictions, and market insights
